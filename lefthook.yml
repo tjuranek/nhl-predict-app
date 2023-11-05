@@ -1,0 +1,5 @@
+pre-commit:
+  commands:
+    eslint:
+      glob: "*.{js,jsx,ts,tsx}"
+      run: npx eslint {staged_files} && npx prettier --write --ignore-unknown {staged_files} && git add {staged_files}
